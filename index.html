@@ -1,0 +1,289 @@
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    
+<meta name="viewport" content="width=device-width">
+<meta charset="UTF-8">
+<title>Поиска людей — фотографии, местоположение, контакты</title>
+<meta name="Description" content="" />
+<meta name="yandex-verification" content="09d13b0fe5bf4616" />
+<link rel="stylesheet" href="css/allcss.css@3.css">
+
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest.html">
+<link rel="mask-icon" href="safari-pinned-tab.svg" color="#1e5391">
+<meta name="apple-mobile-web-app-title" content="Photo Faces">
+<meta name="application-name" content="Photo Faces">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#ffffff">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<style>
+.main-head-wrap {
+    position: relative;
+    background: url(css/bg.jpg) no-repeat;
+    min-height: 80vh;
+    background-position: center top;
+    color: white;
+    padding-bottom: 0px;
+}
+.main-search {
+    padding-top: 60px;
+    margin: 0 auto;
+    max-width: 660px;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 300;
+  padding-bottom: 60px;
+}
+.main-search__title {
+    color: #ffffff;
+    font-family: "Raleway - Black";
+    font-size: 49px;
+    margin-bottom: 40px;
+}
+</style>
+
+
+
+
+
+<!-- Yandex.RTB -->
+<script>window.yaContextCb=window.yaContextCb||[]</script>
+<script src="https://yandex.ru/ads/system/context.js" async></script>
+
+<link rel="shortcut icon" href="favicon.ico">
+</head>
+
+<body>
+  
+<style>
+.install-popup{max-width:1240px;padding:0 15px;margin-left:auto;margin-right:auto;width:100%;display:none;background:#fff;box-shadow:0 2px 4px 0 #425f84;}@media(max-width:575.98px){.install-popup{display:block}}.install-popup__body{display:flex;gap:15px;padding:20px 0}@media(min-width:374px){.install-popup__body{gap:20px}}.install-popup__close:focus{outline:none;}.install-popup__close{position:absolute;background:none;border:none;outline:none;right:10px;top:15px;color:#9399a1;padding:5px;display:block}.install-popup__close svg{width:12px;height:12px}.install-popup__logo svg{width:50px;height:50px}@media(min-width:374px){.install-popup__logo svg{width:64px;height:64px}}.install-popup__title{font-size:16px;line-height:18px;font-weight:500;margin-bottom:3px}@media(max-width:767.98px){.install-popup__title{font-size:15px;line-height:18px;font-weight:500}}.install-popup__text{font-size:12px;line-height:15px;line-height:16px}.install-popup__text svg{display:inline-block;vertical-align:bottom;margin-bottom:2px;height:16px;margin-left:5px}.dark-mode .install-popup{background:#ccdeee;box-shadow:0 2px 4px #232730}
+.clearfy-cookie-hide {display:none;}.pos-fixed{position: fixed;width: 100%;z-index: 20;top:0;}.pt150{padding-top:150px;}
+</style>
+
+<div class="install-popup clearfy-cookie-hide"><div class="install-popup__body"><button id="install-popup__close" class="install-popup__close"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 13 14" fill="currentColor"><path d="M6.3137 8.25676L11.3422 13.2852L12.5993 12.0282L7.57078 6.99968L12.5989 1.97152L11.3419 0.714444L6.3137 5.7426L1.28555 0.714448L0.028473 1.97153L5.05662 6.99968L0.028152 12.0282L1.28523 13.2852L6.3137 8.25676Z"></path></svg></button> <div class="install-popup__logo"><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="enable-background:new 0 0 64 64" viewBox="0 0 64 64"><path d="M51.47 64.08H12.33C5.46 64.08-.1 58.51-.1 51.65V12.51C-.1 5.64 5.47.08 12.33.08h39.13c6.87 0 12.43 5.57 12.43 12.43v39.13c.01 6.87-5.56 12.44-12.42 12.44z" style="fill:#1e5391"/><path d="M31.74 22.18v7.28h11.58v8.86H31.74v16.13h-9.87V13.32H47.3v8.86H31.74z" style="fill:#fff"/></svg></div> <div><div class="install-popup__title">
+Добавить ярлык Photo-Faces.com
+<br>
+на экран "Домой"
+</div> <div class="install-popup__text">Нажмите на иконку <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 512" fill="currentColor"><path d="M64 360C94.93 360 120 385.1 120 416C120 446.9 94.93 472 64 472C33.07 472 8 446.9 8 416C8 385.1 33.07 360 64 360zM64 200C94.93 200 120 225.1 120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200zM64 152C33.07 152 8 126.9 8 96C8 65.07 33.07 40 64 40C94.93 40 120 65.07 120 96C120 126.9 94.93 152 64 152z"></path></svg></span> <br>и в меню выберите <span>"Добавить на главный экран"</span></div></div></div></div>
+
+<script>
+function getCookie(name) {
+  var matches = document.cookie.match(new RegExp(
+    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+  ));
+  return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+var variable = getCookie('clearfy_form_hide');
+if (typeof variable !== 'undefined') {
+  console.log(variable);
+} else {
+  document.querySelector('.install-popup').classList.remove('clearfy-cookie-hide');
+}
+
+document.querySelector('#install-popup__close').addEventListener('click', function () {
+  document.querySelector('.install-popup').classList.add('clearfy-cookie-hide');
+  var clearfy_cookie_date = new Date(new Date().getTime() + 31536000 + 2592e6);
+  document.cookie = "clearfy_form_hide=yes; path=/; expires=" + clearfy_cookie_date.toUTCString();
+});
+</script><!--<div style="width: 100%; height: 30px; background-color: #AA003C;">
+<div class="login">
+<a class="login__link" href="/" id="uLogin_c7adf943">Главная</a>
+</div>
+</div>-->
+
+
+<!-- head -->
+
+
+<div class="inside-head-wrap">
+<header class="header">
+<div class="container">
+<div class="row">
+<div class="col-md-3 text-center text-md-center">
+<div class="header__logo"><a href="index.html"><img class="header__logo-img" src="css/logo.png" alt="Поиска людей ВКонтакте" role="presentation"></a></div>
+</div>
+<div class="col-md-6 text-center top-menu-container">
+<div class="top-menu text-center text-sm-left d-none d-md-block">
+<div class="row">
+<div class="col-sm-6"><a class="top-menu__link" href="index.html#">ПОИСК ЛЮДЕЙ</a></div>
+<div class="col-sm-6"><a class="top-menu__link" href="index.html#">ОДНОФАМИЛЬЦЫ</a></div>
+</div>
+<div class="row">
+<div class="col-sm-6"><a class="top-menu__link" href="index.html#">ПОИСК ПАРТНЕРА</a></div>
+<div class="col-sm-6"><a class="top-menu__link" href="index.html#">ОДНОКЛАССНИКИ</a></div>
+</div>
+<div class="row">
+<div class="col-sm-6"><a class="top-menu__link" href="index.html#">ОДНОКУРСНИКИ</a></div>
+<div class="col-sm-6"><a class="top-menu__link" href="index.html#">СОСЛУЖИВЦЫ</a></div>
+</div>
+<div class="row">       
+<div class="col-sm-6"><a class="top-menu__link" href="index.html#">КОЛЛЕГИ</a></div>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+</header>
+</div>
+
+
+<div class="main-head-wrap">
+<!--<div class="main-head-wrap__mouse"></div>-->
+
+<div class="container">
+<div class="main-search text-center">
+<div class="main-search__title">ПОИСК ЛЮДЕЙ</div>
+<form method="get" action="index.html#h" name="search_people_form" id="search_people_frm">
+<div class="search__item row">
+<div class="col-sm-6 text-right">
+<div class="my-input">
+<input type="text" name="first_name" id="first_name" value="" class="empty">
+<div class="placeholer">Имя*</div>
+</div>
+</div>
+<div class="col-sm-6 text-left">
+<div class="my-input">
+<input type="text" name="last_name" id="last_name" value="" class="empty">
+<div class="placeholer">Фамилия*</div>
+</div>
+</div>
+</div>
+<div class="search__item row">
+<div class="col-sm-6 text-left">
+<div class="my-input">
+<input type="text" name="country" id="country" value="" class="empty ui-autocomplete-input" autocomplete="off">
+<div class="placeholer">Страна</div>
+</div>
+</div>
+<div class="col-sm-6 text-right">
+<div class="my-input">
+<input type="text" name="city" id="city" value="" class="empty ui-autocomplete-input" autocomplete="off">
+<div class="placeholer">Город</div>
+</div>
+</div>
+</div>
+<div class="search__item row">
+<div class="col-sm-6 text-right">
+<div class="my-input">
+<input type="text" name="birth_year" id="birth_year" value="" class="empty">
+<div class="placeholer">Год рождения</div>
+</div>
+</div>
+</div>
+<div class="search__item-button">
+<div id="error"></div>
+<input class="main-search__button" type="submit" name="submit" value="Начать поиск">
+</div>
+</form>        </div>
+</div>
+</div>
+
+<div id="ajax_results">
+
+</div>
+
+<!--
+<div class="main-slide1">
+<div class="container" id='cities'>
+<div class="main-slide1__title">
+БАЗА ДАННЫХ ЛЮДЕЙ
+<div class="main-slide1__title-thin">ПО ГОРОДАМ И СТРАНАМ</div>
+</div>
+<div class="main-slide1__cities">
+<div class="main-slide1__city-item"><a class="main-slide1__city-link" href="/_city/Москва/">Москва</a></div>
+<div class="main-slide1__city-item"><a class="main-slide1__city-link" href="/_city/Санкт-Петербург/">Санкт-Петербург</a></div>
+<div class="main-slide1__city-item"><a class="main-slide1__city-link" href="/_city/Новосибирск/">Новосибирск</a></div>
+<div class="main-slide1__city-item"><a class="main-slide1__city-link" href="/_city/Екатеринбург/">Екатеринбург</a></div>
+<div class="main-slide1__city-item"><a class="main-slide1__city-link" href="/_city/Казань/">Казань</a></div>
+<div class="main-slide1__city-item"><a class="main-slide1__city-link" href="/_city/Челябинск/">Челябинск</a></div>
+<div class="main-slide1__city-item"><a class="main-slide1__city-link" href="/_city/Самара/">Самара</a></div>
+<div class="main-slide1__city-item"><a class="main-slide1__city-link" href="/_city/Уфа/">Уфа</a></div>
+<div class="main-slide1__city-item"><a class="main-slide1__city-link" href="/_city/Ростов-на-Дону/">Ростов-на-Дону</a></div>
+<div class="main-slide1__city-item"><a class="main-slide1__city-link" href="/_city/Омск/">Омск</a></div>
+<div class="main-slide1__city-item"><a class="main-slide1__city-link" href="/_city/Красноярск/">Красноярск</a></div>
+<div class="main-slide1__city-item"><a class="main-slide1__city-link" href="/_city/Воронеж/">Воронеж</a></div>
+<div class="main-slide1__city-item"><a class="main-slide1__city-link" href="/_city/Пермь/">Пермь</a></div>
+<div class="main-slide1__city-item"><a class="main-slide1__city-link" href="/_city/Волгоград/">Волгоград</a></div>
+<div class="main-slide1__city-item"><a class="main-slide1__city-link" href="/_city/Краснодар/">Краснодар</a></div>
+</div>
+</div>
+</div>
+-->
+
+
+
+<script src="css/alljs.js@0.1"></script>
+
+<script>
+function validateSearchPeople(){var my_error='';if(!document.getElementById('first_name').value||document.getElementById('first_name').value.length<3){my_error+='Нужно указать имя длиной не менее трех символов.<br>';}if(!document.getElementById('last_name').value||document.getElementById('last_name').value.length<3){my_error+='Нужно указать фамилию длиной не менее трех символов.<br>';}if(document.getElementById('city').value&&document.getElementById('country').value==0){my_error+='Нужно выбрать страну.<br>';}if(document.getElementById('city').value&&document.getElementById('city').value.length<3){my_error+='Нужно указать название города длиной не менее трех символов.<br>';}if(document.getElementById('birth_year').value&&(document.getElementById('birth_year').value.length!=4||isNumeric(document.getElementById('birth_year').value)==false)){my_error+='Нужно указать год рождения состоящий из четырех цифр.<br>';}if(my_error){document.getElementById('error').innerHTML=my_error;return false;}else{return true;}}
+$("#search_people_frm" ).submit(function( event ) {
+
+  if (validateSearchPeople()) {
+        $("#search_people_frm" ).submit();
+      }
+  return false;
+});
+
+
+</script>
+<footer class="footer">
+<div class="container">
+<div class="row">
+<div class="footer__copy col-sm-12 col-lg-3 text-center text-lg-left mb-sm-3">
+© 2022 — 220vk-list.com
+
+
+</div>
+<div class="col-lg-6">
+<div class="row">
+<div class="col-lg-1"></div>
+<div class="col-sm-4">
+<div class="footer-menu">
+<noindex>
+<div><a class="footer-menu__link" href="index.html#">ОДНОФАМИЛЬЦЫ</a></div>
+<div><a class="footer-menu__link" href="index.html#">ОДНОКЛАССНИКИ</a></div>
+<div><a class="footer-menu__link" href="index.html#">ОДНОКУРСНИКИ</a></div>
+<div><a class="footer-menu__link" href="index.html#">СОСЛУЖИВЦЫ</a></div>
+<div><a class="footer-menu__link" href="index.html#">КОЛЛЕГИ</a></div>
+</noindex>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(89845959, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/89845959" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!--LiveInternet counter--><script>
+new Image().src = "https://counter.yadro.ru/hit?r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";h"+escape(document.title.substring(0,150))+
+";"+Math.random();</script><!--/LiveInternet-->
+
+</body>
+</html>
+
+
